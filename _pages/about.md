@@ -1,9 +1,9 @@
 ---
 title: About
-author: Tao He
+author: Luke Jeong
 date: 2022-02-04
-category: Jekyll
+category: about
 layout: post
 ---
 
-This is an about page.
+Java programmer from Korea
