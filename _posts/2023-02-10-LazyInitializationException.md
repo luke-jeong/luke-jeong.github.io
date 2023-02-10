@@ -32,3 +32,8 @@ OSIV상태에서는 Controller의 `Hibernate Session`과 `Persistence Context`�
 .
 .
 .작성중,,,
+
+
+>참고
+- https://velog.io/@oenomel87/JPA-LazyInitializationException
+- https://jsonobject.tistory.com/605
