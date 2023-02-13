@@ -7,3 +7,5 @@ layout: post
 ---
 
 Java programmer from Korea
+
+JAVA, Spring boot, MySQL, JS
