@@ -61,3 +61,6 @@ plugins:
   - jekyll-feed
   - jekyll-readme-index
   - jemoji
+  
+  
+category_list: [ springboot, jpa, diary, sql ]
