@@ -1,9 +1,9 @@
 ---
 title: Contact
-author: Tao He
+author: Luke Jeong
 date: 2022-02-05
-category: Jekyll
+category: contact
 layout: post
 ---
 
-This is an contact page.
+jgh3482@gmail.com
