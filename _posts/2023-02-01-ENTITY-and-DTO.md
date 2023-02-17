@@ -2,8 +2,7 @@
 title:  "Entity, DTO"
 excerpt: "Spring boot Entity,DTO 공부"
 
-categories: 
-- Blog
+categories: [springboot, jpa]
 tags: 
  - SpringBoot
  - Entity

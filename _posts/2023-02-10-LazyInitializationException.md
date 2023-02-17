@@ -2,8 +2,7 @@
 title:  "LazyInitializationException"
 excerpt: "JPA 공부"
 
-categories: 
-- Blog
+categories: [springboot, jpa]
 tags: 
  - SpringBoot
  - LazyInitializationException
