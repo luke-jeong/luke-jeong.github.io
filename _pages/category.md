@@ -1,7 +1,5 @@
 ---
-layout: page
-title: category
-permalink: /category/
+title: Category
+layout: post
 ---
-
 category
