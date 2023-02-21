@@ -1,15 +1,22 @@
-<div class="catalogue">
-    <h1 class="category-title"><a href="/category/{{ page.title }}">{{ page.title }}</a></h1>
-    {% assign cate = page.category | default: page.title %}
-    {% for post in site.categories[ cate ] %}
-    <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
-        <div>
-            <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
-            <h1 class="catalogue-title">{{ post.subject | upcase }}/ {{ post.title }}</h1>
-            <h4 class="catalogue-desc">{{ post.description }}</h4>
-            <div class="catalogue-line"></div>
-            <p class="catalogue-content">{{ post.content | strip_html | truncatewords: 30 }}</p>
-        </div>
-    </a>
+---
+layout: page
+# The Category layout
+---
+
+<div id="page-category">
+  <h1 class="pl-lg-2">
+    <i class="far fa-folder-open fa-fw text-muted"></i>
+    {{ page.title }}
+    <span class="lead text-muted pl-2">{{ page.posts | size }}</span>
+  </h1>
+
+  <ul class="post-content pl-0">
+    {% for post in page.posts %}
+    <li class="d-flex justify-content-between pl-md-3 pr-md-3">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <span class="dash flex-grow-1"></span>
+      {% include datetime.html date=post.date wrap='span' class='text-muted small' %}
+    </li>
     {% endfor %}
+  </ul>
 </div>
