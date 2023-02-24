@@ -1,17 +1,8 @@
 ---
+layout: post
 title:  "Entity, DTO"
-excerpt: "Spring boot Entity,DTO 공부"
-
+date:   2020-02-01 19:00:00 +0900
 categories: [springboot, jpa]
-tags: 
- - SpringBoot
- - Entity
- - DTO
-
-toc: false
-toc_sticky: true
- 
-date: 2023-02-01
 ---
 
 지인이 entity와 dto를 쓰는 이유를 물었을때, 정확하게 답변을 할수가 없었다.
