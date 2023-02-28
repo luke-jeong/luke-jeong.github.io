@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Entity, DTO"
-date:   2020-02-01 19:00:00 +0900
+date:   2023-02-01 19:00:00 +0900
 categories: springboot
 ---
 
