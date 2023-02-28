@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Java Thread"
-date:   2020-02-25 16:27:00 +0900
+date:   2023-02-25 16:27:00 +0900
 categories: java
 ---
 
