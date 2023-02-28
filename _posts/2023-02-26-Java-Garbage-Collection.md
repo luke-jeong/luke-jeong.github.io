@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Java Garbage Collection"
-date:   2020-02-26 14:22:00 +0900
+date:   2023-02-26 14:22:00 +0900
 categories: java
 ---
 
