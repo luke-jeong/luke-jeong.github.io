@@ -53,7 +53,7 @@ categories: java
    JAVA가 아닌 다른 언어로 구성된 메소드를 실행시 사용되는 공간.
 
 
-> 참조
+> 참고
 - https://coding-factory.tistory.com/828
 - https://velog.io/@shin_stealer/%EC%9E%90%EB%B0%94%EC%9D%98-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EA%B5%AC%EC%A1%B0
 - https://steady-coding.tistory.com/305

@@ -53,7 +53,7 @@ categories: java
  * 프로그램 여러개 켜는 것보다 하나의 프로그램 안에서 여러 작업을 해결하는것이 효율적인 자원 관리에 유리하다.
  * 프로세스간의 전환속도보다 스레드간의 전환속도가 더 빠르다.
 
->참조
+>참고
 - https://devlog-wjdrbs96.tistory.com/145
 - https://kadosholy.tistory.com/121
 - https://gmlwjd9405.github.io/2018/09/14/process-vs-thread.html
