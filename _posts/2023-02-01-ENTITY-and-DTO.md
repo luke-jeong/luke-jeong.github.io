@@ -15,9 +15,9 @@ categories: spring
  
  
 ## Entity
- `Entity` 클래스는 `DB`와 맞닿는 핵심 클래스이다. 이 Entity 클래스를 기준으로 테이블이 생성된다. Entity의 각 필드는 DB에서 하나의 Column이 된다. 
+ **Entity** 클래스는 **DB**와 맞닿는 핵심 클래스이다. 이 Entity 클래스를 기준으로 테이블이 생성된다. Entity의 각 필드는 DB에서 하나의 Column이 된다. 
 Entity 생성 시 Getter는 만들지만 Setter를 만들지는 않는다. Setter로 인해 Entity의 인스턴스 값들의 변화를 명확히 알 수 없게되기 때문이다.
-Entity에 값을 넣어주기 위해서는 Setter가 아닌 `Builder` 패턴을 사용한다. Builder를 이용하면 필요한 값만 집어넣을 수 있다.
+Entity에 값을 넣어주기 위해서는 Setter가 아닌 **Builder** 패턴을 사용한다. Builder를 이용하면 필요한 값만 집어넣을 수 있다.
 
 
 ~~~java
@@ -51,7 +51,7 @@ BoardEntity boardEntity = BoardEntity.builder()
 ~~~
 
 ## DTO
-`DTO (Data Transfer Object)`는 계층간 데이터 교환에 사용된다. 특별한 로직을 가지지 않고 순수한 데이터 객체상태를 유지한다. DTO를 이용해 Entity 클래스를 보호하면서 Entity 클래스에서 필요한 데이터만 선택적으로 담아 사용한다. 코드만 보면 Entity랑 거의 비슷하게 생겼다.
+**DTO (Data Transfer Object)**는 계층간 데이터 교환에 사용된다. 특별한 로직을 가지지 않고 순수한 데이터 객체상태를 유지한다. DTO를 이용해 Entity 클래스를 보호하면서 Entity 클래스에서 필요한 데이터만 선택적으로 담아 사용한다. 코드만 보면 Entity랑 거의 비슷하게 생겼다.
 
 ```java
 @Getter
