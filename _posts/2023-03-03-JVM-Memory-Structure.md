@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "JVM Memory Structure"
+title:  "[Java] JVM Memory Structure"
 date:   2023-03-05 18:06:00 +0900
 categories: java
 ---
@@ -13,16 +13,16 @@ categories: java
 2. 자바 컴파일러(javac)가 자바 소스코드(.java)를 자바 바이트코드(.class)로 컴파일한다.
 3. Class Loader를 통해 JVM Runtime Data Area로 로딩한다.
 4. Runtime Data Areadp fheldehls .class 들은 Execution Engine을 통해 해석한다.
-5. 해석된 바이트 코드는 Runtime Data Area (`Memory Area`) 의 각 영역에 배치되어 수행하며 이 과정에서 Execution Engine에 의해 GC의 작동과 스레드 동기화가 이루어진다.
+5. 해석된 바이트 코드는 Runtime Data Area (**Memory Area**) 의 각 영역에 배치되어 수행하며 이 과정에서 Execution Engine에 의해 GC의 작동과 스레드 동기화가 이루어진다.
 
 ## 구조
 1. Class Loader  
-   자바는 동적으로 클래스를 읽어오므로, 프로그램이 실행중인 런타임에서야 모든 코드가 JVM과 연결된다. 이렇게 동적으로 클래스를 로딩해주는 역할을 하는 것이 `클래스 로더`이다. .java 소스를 컴파일러가 컴파일하면 .class파일이 생성되는데, 클래스 로더는 .class파일을 묶어서 JVM이 운영체제로부터 할당받은 메모리 영역인 Runtime Data Area로 적재한다.  
+   자바는 동적으로 클래스를 읽어오므로, 프로그램이 실행중인 런타임에서야 모든 코드가 JVM과 연결된다. 이렇게 동적으로 클래스를 로딩해주는 역할을 하는 것이 **클래스 로더**이다. .java 소스를 컴파일러가 컴파일하면 .class파일이 생성되는데, 클래스 로더는 .class파일을 묶어서 JVM이 운영체제로부터 할당받은 메모리 영역인 Runtime Data Area로 적재한다.  
    ![](https://velog.velcdn.com/images/ghjeong/post/fcef4c5a-114f-45d0-a8e4-1ede29b2f3d7/image.png)
 
 
 2. Execution Engine  
-   클래스 로더에 의해 JVM으로 로드 된 .class 파일들은 Runtime Data Area의 Method Area에 배치되는데, 배치된 이후에 JVM은 Method Area의 바이트코드를 `실행엔진`에 제공하여 정의된 내용대로 바이트 코드를 실행시킨다. 이때, 로드된 바이트코드를 실행하는 런타임 모듈이 실행엔진이다. 실행엔진은 바이트코드를 명령어 단위로 읽어서 실행한다.
+   클래스 로더에 의해 JVM으로 로드 된 .class 파일들은 Runtime Data Area의 Method Area에 배치되는데, 배치된 이후에 JVM은 Method Area의 바이트코드를 **실행엔진**에 제공하여 정의된 내용대로 바이트 코드를 실행시킨다. 이때, 로드된 바이트코드를 실행하는 런타임 모듈이 실행엔진이다. 실행엔진은 바이트코드를 명령어 단위로 읽어서 실행한다.
 
 3. Garbage Collector  
    가비지 컬렉터는 지난 글에 설명한 적이 있다. JVM은 GC를 이용하여 더 이상 사용하지 않는 메모리를 자동으로 회수해준다. Heap 메모리 영역에 생성된 객체들 중에 참조되지 않는 객체들을 탐색 후 제거한다. GC역할을 수행하는 스레드를 제외한 나머지 모든 스레드는 일시정지상태가 된다.  
