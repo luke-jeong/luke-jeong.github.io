@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Java Garbage Collection"
+title:  "[Java] Java Garbage Collection"
 date:   2023-02-26 14:22:00 +0900
 categories: java
 ---
@@ -16,7 +16,7 @@ categories: java
     * GC가 동작하는 동안은 다른 동작을 멈추기 때문에 오버헤드가 발생한다.
 
 ## GC 대상
-객체가 참조되고 있는 상태(Reachable)이 아닌 `객체가 참조되고 있지 않은 상태일때(Unreachable)`, GC의 대상이 된다.
+객체가 참조되고 있는 상태(Reachable)이 아닌 **객체가 참조되고 있지 않은 상태일때(Unreachable)**, GC의 대상이 된다.
 
 
 > 참고
