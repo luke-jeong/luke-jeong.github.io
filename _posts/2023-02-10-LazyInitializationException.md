@@ -2,7 +2,7 @@
 layout: post
 title:  "[Spring] LazyInitializationException"
 date:   2023-02-10 18:00:00 +0900
-categories: JPA Spring
+categories: JPA, Spring
 ---
 
 지난번 proxy 정리 글에서 나왔던 **LazyInitializationException**에 대해 정리하려고 한다.
