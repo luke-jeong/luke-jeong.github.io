@@ -2,7 +2,7 @@
 layout: post
 title:  "[Java] Java Thread"
 date:   2023-02-25 16:27:00 +0900
-categories: java
+categories: Java
 ---
 
 스레드(Thread)는 자바에서 여러가지 일을 동시에 처리하기 위해 사용된다.
