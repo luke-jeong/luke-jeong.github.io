@@ -2,7 +2,7 @@
 layout: post
 title:  "[Java] Java Garbage Collection"
 date:   2023-02-26 14:22:00 +0900
-categories: java
+categories: Java
 ---
 
 가비지 컬렉션에 대해 알아봤다.
