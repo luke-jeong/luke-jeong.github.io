@@ -2,7 +2,7 @@
 layout: post
 title:  "[Java] JVM Memory Structure"
 date:   2023-03-05 18:06:00 +0900
-categories: java
+categories: Java
 ---
 
 지난번 GC에 대해 알아보다가 JVM 메모리 구조에 대해 궁금해져 찾아봤다.
