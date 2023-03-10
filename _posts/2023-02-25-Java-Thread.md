@@ -10,10 +10,12 @@ categories: Java
 
 ## Process
 프로세스는 일반적으로 cpu에 의해 메모리에 올려져 **실행중인 프로그램**을 말한다. 프로그램 실행을 위해 OS로부터 실행에 필요한 자원인 **메모리**를 할당받는다. 프로세스는 각각 독립된 메모리 영역(Code, Data, Stack, Heap)을 가진다. 
-자바 JVM은 주로 하나의 프로세스로 실행되며 동시에 여러 작업을 수행하기 위해 멀티 스레드를 지원한다.
+자바 JVM은 주로 하나의 프로세스로 실행되며 동시에 여러 작업을 수행하기 위해 멀티 스레드를 지원한다.  
+
 ![](https://velog.velcdn.com/images/ghjeong/post/fb6a3778-e4df-4307-abf3-6e8a1eaf76a7/image.png) (그림 출처 : https://gmlwjd9405.github.io/2018/09/14/process-vs-thread.html)
 ## Thread
-스레드는 프로세스 안에서 실질적으로 **작업을 실행하는 단위**를 말한다. 프로세스 내에는 적어도 한개 이상의 스레드가 존재한다. 같은 프로세스 안에 스레드를 여러개 생성하면 Stack만 따로 할당받고 Code, Data, Heap 영역은 공유한다. 
+스레드는 프로세스 안에서 실질적으로 **작업을 실행하는 단위**를 말한다. 프로세스 내에는 적어도 한개 이상의 스레드가 존재한다. 같은 프로세스 안에 스레드를 여러개 생성하면 Stack만 따로 할당받고 Code, Data, Heap 영역은 공유한다.  
+
 ![](https://velog.velcdn.com/images/ghjeong/post/6c4028cd-2df8-4eb7-bb4f-27b141b6df67/image.png) (그림 출처 : https://gmlwjd9405.github.io/2018/09/14/process-vs-thread.html)
 
 ## Java Thread
