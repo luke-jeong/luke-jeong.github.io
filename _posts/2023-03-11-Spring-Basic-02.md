@@ -30,7 +30,7 @@ public class OrderServiceImpl implements OrderService {
 ```
 하지만 이대로면 구현객체가 없어 NullPointerException이 뜬다.   
 따라서 외부에서 주입할 구현객체를 결정하도록 만들어야한다.
-* AppConfig
+* AppConfig  
   AppConfig는 앞서 설명한 애플리케이션의 전체 동작 방식을 구성(Config)하기 위해, 구현객체를 생성하고, 연결하는 책임을 가지는 별도의 설정클래스이다.
  ```java
  public class AppConfig {
