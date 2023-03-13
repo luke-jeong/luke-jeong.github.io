@@ -59,4 +59,42 @@ public class MemberServiceImpl implements MemberService {
 * MemberServiceImpl 의 생성자를 통해서 어떤 구현 객체를 주입할지는 오직 외부( AppConfig )에서 결정된다.
 * MemberServiceImpl 은 이제부터 의존관계에 대한 고민은 외부에 맡기고 실행에만 집중하면 된다  
   ![](https://velog.velcdn.com/images/ghjeong/post/3869ed3c-75ef-4dc3-b361-9ac337fd4885/image.png)
+  ![](https://velog.velcdn.com/images/ghjeong/post/b9bc88e0-6b35-4bc0-afbf-85b0914e254b/image.png)
+
+* appConfig 객체는 memoryMemberRepository 객체를 생성하고 그 참조값을 memberServiceImpl을 생성하면서 생성자로 전달한다.
+* 클라이언트인 memberServiceImpl 입장에서 보면 의존관계를 마치 외부에서 주입해주는 것 같다고 해서
+> DI (Dependency Injection)
+
+우리말로 **의존관계 주입** 또는 **의존성 주입**이라 한다
+
+## AppConfig 리팩터링
+기존 AppConfig
+```java
+public class AppConfig {
+   public MemberService memberService() {
+   		return new MemberServiceImpl(new MemoryMemberRepository());
+   }
+   public OrderService orderService() {
+   		return new OrderServiceImpl(new MemoryMemberRepository(), new FixDiscountPolicy());
+   }
+}
+```
+리팩터링 진행한 AppConfig
+```java
+public class AppConfig {
+   public MemberService memberService() {
+   		return new MemberServiceImpl(memberRepository());
+   }
+   public OrderService orderService() {
+   		return new OrderServiceImpl(memberRepository(), discountPolicy());
+   }
+   public MemberRepository memberRepository() {
+   		return new MemoryMemberRepository();
+   }
+   public DiscountPolicy discountPolicy() {
+   		return new FixDiscountPolicy();
+   }
+ }
+```
+중복을 제거하고 역할에 따른 구현이 보이도록 리팩터링했다. 역할을 세우고 그 안에 구현이 들어가게 해서 애플리케이션 전체 구성이 어떻게 되어있는지 빠르게 파악할 수 있다.
 
