@@ -81,9 +81,9 @@ public class MemberApp {
 
 > 결론
 > * ApplicationContext는 BeanFactory의 기능을 상속받는다.
-* ApplicationContext는 빈 관리기능 + 편리한 부가 기능을 제공한다.
-* BeanFactory를 직접 사용할 일은 거의 없다. 부가기능이 포함된 ApplicationContext를 사용한다.
-* BeanFactory나 ApplicationContext를 **스프링 컨테이너**라 한다
+> * ApplicationContext는 빈 관리기능 + 편리한 부가 기능을 제공한다.
+> * BeanFactory를 직접 사용할 일은 거의 없다. 부가기능이 포함된 ApplicationContext를 사용한다.
+> * BeanFactory나 ApplicationContext를 **스프링 컨테이너**라 한다
 
 ## 스프링 빈 설정 메타정보 - BeanDefinition
 BeanDefinition에 대해서는 너무 깊이있게 이해하기 보다는, 스프링이 다양한 형태의 설정 정보를 BeanDefinition으로 추상화해서 사용하는 것 정도만 이해하면 된다. 
