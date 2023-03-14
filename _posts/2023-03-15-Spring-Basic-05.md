@@ -32,3 +32,38 @@ categories: Spring
     * 특정 클라이언트가 값을 변경할 수 있는 필드가 있으면 안된다.
     * 가급적 읽기만 가능해야 한다.
     * 필드 대신에 Java에서 공유되지 않는, 지역변수, 파라미터, ThreadLocal 등을 사용해야 한다.
+
+## @Configuration과 싱글톤
+```java
+@Configuration
+public class AppConfig {
+   @Bean
+   public MemberService memberService() {
+   		return new MemberServiceImpl(memberRepository());
+   }
+   @Bean
+   public OrderService orderService() {
+       return new OrderServiceImpl(
+       memberRepository(),
+       discountPolicy());
+   }
+   @Bean
+   public MemberRepository memberRepository() {
+   		return new MemoryMemberRepository();
+   }
+   ...
+}
+```
+위 코드에서 memberRepository의 경우  
+* MemberService 에서 1번  
+* OrderService 에서 1번  
+* memberRepository 에서 1번  
+
+총 3번의 호출로 인해 각각 다른 memberRepository가 생성되기 때문에 싱글톤이 깨지는 것처럼 보인다.  
+그러나 막상 테스트를 해보면 memberRepository 인스턴스는 모두 같은 인스턴스가 공유되어 사용된다.
+### 이유
+@Configuration을 적용하게 되면 해당 클래스를 상속받은 임의의 다른 클래스를 만들고 , 그 다른 클래스를 스프링 빈으로 등록한다.  
+![](https://velog.velcdn.com/images/ghjeong/post/f6be51cc-8d61-4c68-86ea-78d7beafb278/image.png)  
+이 임의의 다른 클래스가 싱글톤이 보장되도록 해준다.  
+@Bean이 붙은 매서드마다 이미 스프링 빈이 존재하면 존재하는 빈을 반환하고, 없으면 생성해서 스프링 빈으로 등록하고 반환하는 코드가 동적으로 만들어지는 덕에, 싱글톤이 보장되는 것이다.  
+@Bean만 사용해도 스프링 빈으로 등록은 되지만, 싱글톤을 보장하지는 않는다. 따라서 **스프링 정보는 항상 @Configuration을 사용**해야한다.
