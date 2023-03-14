@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Spring] Spring Basic 04"
-date:   2023-03-14 09:45:00 +0900
+date:   2023-03-14 09:50:00 +0900
 categories: Spring
 ---
 ## Spring으로 전환
